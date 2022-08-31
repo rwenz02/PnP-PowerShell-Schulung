@@ -1,0 +1,119 @@
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2021/03/ProvisioningSchema"
+Author="Rick Wenz"
+Generator="RWE Provisioning"
+Version="1.0">
+  <pnp:Preferences Author="Rick Wenz" Version="1.0" Generator="RWE Provisioning" />
+
+  <pnp:Templates ID="RWE.Intranet">
+
+    <pnp:ProvisioningTemplate ID="RWE.Intranet.SiteColumns" Version="1.0">
+
+      <pnp:SiteFields>
+
+        <!-- example fields ~-->
+		
+        <Field 
+              ID="{2d2b0821-259e-4507-ba37-0a21c29514c7}"
+              Type="Note"
+              DisplayName="Content"
+              Description="" 
+              Required="FALSE" 
+              RichText="TRUE" 
+              AllowHyperlink="TRUE"
+              RichTextMode="FullHtml"
+              IsolateStyles="TRUE"
+              StaticName="RWE_Content" 
+              Name="RWE_Content"
+              Group="RWE Intranet Site Columns" />
+
+        <Field 
+              DisplayName="Date" 
+              Format="DateTime" 
+              Name="RWE_PublishingDate" 
+              Required="FALSE" 
+              Type="DateTime" 
+              ID="{3107D6BF-EBAC-443D-8621-EE50020E0110}" 
+              StaticName="RWE_PublishingDate"
+              Group="RWE Intranet Site Columns"/>
+
+        <Field 
+              ID="{3CACD459-CA46-4C9D-B9FB-1914DDDA4DE0}"
+              Type="Note"
+              Name="RWE_CategoryTaxHTField0"
+              StaticName="RWE_CategoryTaxHTField0"
+              DisplayName="RWE_CategoryTaxHTField0"
+              ShowInViewForms="FALSE"
+              ShowInNewForm="FALSE"
+              ShowInEditForm="FALSE"
+              ShowInDisplayForm="FALSE"
+              ShowInListSettings="FALSE"
+              ShowInVersionHistory="FALSE"
+              Required="FALSE"
+              Hidden="TRUE"
+              CanToggleHidden="TRUE"
+              Group="RWE Intranet Site Columns"/>
+        
+        <Field 
+              Type="TaxonomyFieldTypeMulti"
+              DisplayName="Category" 
+              Required="TRUE" 
+              ID="{E000A1ED-9FBD-453E-B7A4-C36A4BCA58D0}" 
+              StaticName="RWE_Category" 
+              Name="RWE_Category"
+              ShowField="Term1033"
+              EnforceUniqueValues="FALSE"
+              Mult="FALSE"
+              Group="RWE Intranet Site Columns">
+
+          <Default />
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>UserCreated</Name>
+                <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>Open</Name>
+                <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{3CACD459-CA46-4C9D-B9FB-1914DDDA4DE0}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>IsKeyword</Name>
+                <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>TargetTemplate</Name>
+              </Property>
+              <Property>
+                <Name>CreateValuesInEditForm</Name>
+                <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+
+        <Field 
+            ID="{D849D563-D7E3-4F87-B24C-CE20FAA8FBF0}"
+            Type="Boolean"
+            Name="RWE_NewsIsActive"
+            StaticName="RWE_NewsIsActive"
+            DisplayName="Active"
+            Description="indicates wheter or not the news should be shown in the WebPart"
+            Group="RWE Intranet Site Columns" />
+
+        <!--~ example fields -->
+
+      </pnp:SiteFields>
+      
+    </pnp:ProvisioningTemplate>
+    
+  </pnp:Templates>
+  
+</pnp:Provisioning>
