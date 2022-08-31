@@ -1,0 +1,657 @@
+<!-- source: https://gist.github.com/rudfoss/2e858a6561af74a98962414dc2a4cdd4 -->
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2019/09/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=3.17.2001.2, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="all-site-columns-template-container">
+    <pnp:ProvisioningTemplate ID="all-site-columns-template" Version="1" Scope="RootSite">
+
+      <pnp:SiteFields>
+        <Field Type="Note" DisplayName="test-managedmetadata-multi_0" StaticName="p476b49a9b31428dadff0fc41f113eb7" Name="p476b49a9b31428dadff0fc41f113eb7" ID="{72733dbb-ff54-421e-a3e4-cbebfb642da7}" ShowInViewForms="FALSE" Required="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" />
+        <Field Type="Note" DisplayName="test-managedmetadata_0" StaticName="nb91ac28dbe147e5b76fa0c92f261dc0" Name="nb91ac28dbe147e5b76fa0c92f261dc0" ID="{35428a2c-6205-46f5-918b-1fa979bdc865}" ShowInViewForms="FALSE" Required="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" />
+        <Field Type="Number" DisplayName="test-number" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Group="Test - all columns" ID="{6245e606-6a20-4e3f-8d16-b44009a2239b}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-number" Name="test-number">
+        </Field>
+        <Field Type="Choice" DisplayName="test-choice-dropdown" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Dropdown" FillInChoice="FALSE" Group="Test - all columns" ID="{8258360a-cfe4-40ef-97e9-58d894d4bb60}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-choice-dropdown" Name="test-choice-dropdown">
+          <Default>Alpha</Default>
+          <CHOICES>
+            <CHOICE>Alpha</CHOICE>
+            <CHOICE>Bravo</CHOICE>
+            <CHOICE>Charlie</CHOICE>
+          </CHOICES>
+        </Field>
+        <Field Type="HTML" DisplayName="test-fullhtml" RichText="TRUE" RichTextMode="ThemeHtml" Required="FALSE" Group="Test - all columns" ID="{eee1da0a-9f8f-439f-b559-d52b832890c0}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-fullhtml" Name="test-fullhtml" />
+        <Field Type="DateTime" DisplayName="test-datetime-date-standard" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" Group="Test - all columns" FriendlyDisplayFormat="Disabled" ID="{9986450b-f4fd-426f-b6d0-b51c0d41ba61}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-datetime-date-standard" Name="test-datetime-date-standard">
+        </Field>
+        <Field Type="Number" DisplayName="test-number--50-50" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Min="-50" Max="50" Group="Test - all columns" ID="{638c390f-8d1d-498b-9c96-0c2900c3fb4c}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-number--50-50" Name="test-number--50-50">
+        </Field>
+        <Field Type="LookupMulti" DisplayName="test-lookup-multi" Required="FALSE" EnforceUniqueValues="FALSE" List="{{listid:Test-Lookup-Source}}" WebId="{siteid}" ShowField="Title" Mult="TRUE" Sortable="FALSE" UnlimitedLengthInDocumentLibrary="TRUE" Group="Test - all columns" ID="{f64e9513-6777-42a3-9b98-1f5b0f65a54f}" SourceID="{{siteid}}" StaticName="test-lookup-multi" Name="test-lookup-multi" />
+        <Field Type="Number" DisplayName="test-number-decimal-percentage" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Percentage="TRUE" Decimals="2" Group="Test - all columns" ID="{6b6c8018-7746-4a19-a852-ea10524bf24e}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-number-decimal-percentage" Name="test-number-decimal-percentage">
+        </Field>
+        <Field Type="Choice" DisplayName="test-choice-radio" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="RadioButtons" FillInChoice="FALSE" Group="Test - all columns" ID="{1069dd1a-401a-435a-8443-d8221f0323b1}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-choice-radio" Name="test-choice-radio">
+          <Default>Delta</Default>
+          <CHOICES>
+            <CHOICE>Delta</CHOICE>
+            <CHOICE>Echo</CHOICE>
+            <CHOICE>Foxtrot</CHOICE>
+          </CHOICES>
+        </Field>
+        <Field Type="Note" DisplayName="test-multi-line-text-plain" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RichText="FALSE" Sortable="FALSE" Group="Test - all columns" ID="{56f17f1f-0bd0-4fd5-b587-d10d150dfda3}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-multi-line-text-plain" Name="test-multi-line-text-plain" CustomFormatter="" RestrictedMode="TRUE" RichTextMode="Compatible" IsolateStyles="FALSE" AppendOnly="FALSE" UnlimitedLengthInDocumentLibrary="FALSE">
+        </Field>
+        <Field Type="Note" DisplayName="test-multi-line-text-rich-append" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RichText="TRUE" RichTextMode="FullHtml" IsolateStyles="TRUE" AppendOnly="TRUE" Sortable="FALSE" Group="Test - all columns" ID="{876e9026-5d25-4c37-af72-a59a72d4542a}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-multi-line-text-rich-append" Name="test-multi-line-text-rich-append" CustomFormatter="" RestrictedMode="TRUE" UnlimitedLengthInDocumentLibrary="FALSE">
+        </Field>
+        <Field Type="TaxonomyFieldType" DisplayName="test-managedmetadata" List="{{listid:TaxonomyHiddenList}}" WebId="{siteid}" ShowField="Term1033" Required="FALSE" EnforceUniqueValues="FALSE" Group="Test - all columns" ID="{7b91ac28-dbe1-47e5-b76f-a0c92f261dc0}" SourceID="{{siteid}}" StaticName="test-managedmetadata" Name="test-managedmetadata">
+          <Default>
+          </Default>
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{sitecollectiontermstoreid}</Value>
+              </Property>
+              <Property>
+                <Name>GroupId</Name>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{termsetid:test-taxonomygroup:test-taxonomytermset}</Value>
+              </Property>
+              <Property>
+                <Name>AnchorId</Name>
+                <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+              </Property>
+              <Property>
+                <Name>UserCreated</Name>
+                <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>Open</Name>
+                <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{35428a2c-6205-46f5-918b-1fa979bdc865}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>IsKeyword</Name>
+                <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>TargetTemplate</Name>
+              </Property>
+              <Property>
+                <Name>CreateValuesInEditForm</Name>
+                <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>FilterAssemblyStrongName</Name>
+                <Value xmlns:q10="http://www.w3.org/2001/XMLSchema" p4:type="q10:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value>
+              </Property>
+              <Property>
+                <Name>FilterClassName</Name>
+                <Value xmlns:q11="http://www.w3.org/2001/XMLSchema" p4:type="q11:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value>
+              </Property>
+              <Property>
+                <Name>FilterMethodName</Name>
+                <Value xmlns:q12="http://www.w3.org/2001/XMLSchema" p4:type="q12:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">GetFilteringHtml</Value>
+              </Property>
+              <Property>
+                <Name>FilterJavascriptProperty</Name>
+                <Value xmlns:q13="http://www.w3.org/2001/XMLSchema" p4:type="q13:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">FilteringJavascript</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+        <Field Type="MultiChoice" DisplayName="test-choice-checkbox" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" FillInChoice="FALSE" Group="Test - all columns" ID="{f1c3bb2e-76f5-4586-be0d-40882ff49035}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-choice-checkbox" Name="test-choice-checkbox">
+          <Default>Golf</Default>
+          <CHOICES>
+            <CHOICE>Golf</CHOICE>
+            <CHOICE>Hotel</CHOICE>
+            <CHOICE>India</CHOICE>
+          </CHOICES>
+        </Field>
+        <Field Type="SummaryLinks" DisplayName="test-summarylinks" RichText="TRUE" RichTextMode="FullHtml" Required="FALSE" Group="Test - all columns" ID="{512d5f31-4a0a-4b45-a63c-0a20fb0768a0}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-summarylinks" Name="test-summarylinks" />
+        <Field Type="Text" DisplayName="test-single-line-text" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" Group="Test - all columns" ID="{0b368533-3282-420b-9d6f-7c47f91e1f6e}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-single-line-text" Name="test-single-line-text" CustomFormatter="">
+        </Field>
+        <Field Type="UserMulti" DisplayName="test-persongroup-peoplegroup" List="UserInfo" Required="FALSE" EnforceUniqueValues="FALSE" ShowField="ImnName" UserSelectionMode="PeopleAndGroups" UserSelectionScope="0" Group="Test - all columns" ID="{ac6ab337-61fd-4c03-b550-5e20f24cbf4a}" SourceID="{{siteid}}" StaticName="test-persongroup-peoplegroup" Name="test-persongroup-peoplegroup" AllowDeletion="TRUE" Mult="TRUE" Sortable="FALSE" />
+        <Field Type="DateTime" DisplayName="test-datetime-datetime-standard" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateTime" Group="Test - all columns" FriendlyDisplayFormat="Disabled" ID="{dc756340-75c2-44cd-b73f-295d15bb290d}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-datetime-datetime-standard" Name="test-datetime-datetime-standard">
+        </Field>
+        <Field Type="Currency" DisplayName="test-currency-us" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" LCID="1033" Group="Test - all columns" ID="{37290e4b-eb6a-4718-8adb-84a1d9703ba6}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-currency-us" Name="test-currency-us">
+        </Field>
+        <Field Type="URL" DisplayName="test-hyperlinkpicture-hyperlink" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Hyperlink" Group="Test - all columns" ID="{fa328c4c-fb09-4cfc-870c-c1ba16ac6cd1}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-hyperlinkpicture-hyperlink" Name="test-hyperlinkpicture-hyperlink">
+        </Field>
+        <Field Type="Note" DisplayName="test-multi-line-text-rich" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RichText="TRUE" RichTextMode="FullHtml" IsolateStyles="TRUE" Sortable="FALSE" Group="Test - all columns" ID="{20f2734f-266f-4530-ad6c-0a2b5bb4a05c}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-multi-line-text-rich" Name="test-multi-line-text-rich" CustomFormatter="" RestrictedMode="TRUE" AppendOnly="FALSE" UnlimitedLengthInDocumentLibrary="FALSE">
+        </Field>
+        <Field Type="Number" DisplayName="test-number-percentage" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Percentage="TRUE" Group="Test - all columns" ID="{a444de63-a0ec-4c11-9892-1a45c10ee3e0}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-number-percentage" Name="test-number-percentage">
+        </Field>
+        <Field Type="DateTime" DisplayName="test-datetime-date-friendly-today" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" Group="Test - all columns" FriendlyDisplayFormat="Relative" ID="{63799469-e506-4cb0-88e1-001536435a1d}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-datetime-date-friendly-today" Name="test-datetime-date-friendly-today">
+          <Default>[today]</Default>
+        </Field>
+        <Field Type="Boolean" DisplayName="test-yesno" EnforceUniqueValues="FALSE" Indexed="FALSE" Group="Test - all columns" ID="{a0516171-632a-43a9-a39f-2b18b84e91f4}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-yesno" Name="test-yesno">
+          <Default>1</Default>
+        </Field>
+        <Field Type="Link" DisplayName="test-hyperlinkformatting" RichText="TRUE" RichTextMode="ThemeHtml" Required="FALSE" Group="Test - all columns" ID="{7347a07d-a48a-41bf-9a87-9ad1fee5e2f4}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-hyperlinkformatting" Name="test-hyperlinkformatting" />
+        <Field Type="Lookup" DisplayName="test-lookup-single" Required="FALSE" EnforceUniqueValues="FALSE" List="{{listid:Test-Lookup-Source}}" WebId="{siteid}" ShowField="ID" UnlimitedLengthInDocumentLibrary="FALSE" Group="Test - all columns" ID="{b025d285-4d1a-4ff0-b391-edbd759677b0}" SourceID="{{siteid}}" StaticName="test-lookup-single" Name="test-lookup-single" />
+        <Field Type="URL" DisplayName="test-hyperlinkpicture-picture" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Image" Group="Test - all columns" ID="{2b59e28f-3e12-4d25-8ddf-60805c041178}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-hyperlinkpicture-picture" Name="test-hyperlinkpicture-picture">
+        </Field>
+        <Field Type="Number" DisplayName="test-number-2-decimals" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Decimals="2" Group="Test - all columns" ID="{fbbc3e98-2e79-4d9b-b3af-a9f6cc24809c}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-number-2-decimals" Name="test-number-2-decimals">
+        </Field>
+        <Field Type="TaxonomyFieldTypeMulti" DisplayName="test-managedmetadata-multi" List="{{listid:TaxonomyHiddenList}}" WebId="{siteid}" ShowField="Term1033" Required="FALSE" EnforceUniqueValues="FALSE" Mult="TRUE" Sortable="FALSE" Group="Test - all columns" ID="{9476b49a-9b31-428d-adff-0fc41f113eb7}" SourceID="{{siteid}}" StaticName="test-managedmetadata-multi" Name="test-managedmetadata-multi">
+          <Default>
+          </Default>
+          <Customization>
+            <ArrayOfProperty>
+              <Property>
+                <Name>SspId</Name>
+                <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{sitecollectiontermstoreid}</Value>
+              </Property>
+              <Property>
+                <Name>GroupId</Name>
+              </Property>
+              <Property>
+                <Name>TermSetId</Name>
+                <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{termsetid:test-taxonomygroup:test-taxonomytermset}</Value>
+              </Property>
+              <Property>
+                <Name>AnchorId</Name>
+                <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">00000000-0000-0000-0000-000000000000</Value>
+              </Property>
+              <Property>
+                <Name>UserCreated</Name>
+                <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>Open</Name>
+                <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>TextField</Name>
+                <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{72733dbb-ff54-421e-a3e4-cbebfb642da7}</Value>
+              </Property>
+              <Property>
+                <Name>IsPathRendered</Name>
+                <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>IsKeyword</Name>
+                <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>TargetTemplate</Name>
+              </Property>
+              <Property>
+                <Name>CreateValuesInEditForm</Name>
+                <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+              </Property>
+              <Property>
+                <Name>FilterAssemblyStrongName</Name>
+                <Value xmlns:q10="http://www.w3.org/2001/XMLSchema" p4:type="q10:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value>
+              </Property>
+              <Property>
+                <Name>FilterClassName</Name>
+                <Value xmlns:q11="http://www.w3.org/2001/XMLSchema" p4:type="q11:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value>
+              </Property>
+              <Property>
+                <Name>FilterMethodName</Name>
+                <Value xmlns:q12="http://www.w3.org/2001/XMLSchema" p4:type="q12:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">GetFilteringHtml</Value>
+              </Property>
+              <Property>
+                <Name>FilterJavascriptProperty</Name>
+                <Value xmlns:q13="http://www.w3.org/2001/XMLSchema" p4:type="q13:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">FilteringJavascript</Value>
+              </Property>
+            </ArrayOfProperty>
+          </Customization>
+        </Field>
+        <Field Type="DateTime" DisplayName="test-datetime-datetime-friendly" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateTime" Group="Test - all columns" FriendlyDisplayFormat="Relative" ID="{422feac8-8365-438a-b403-1be757cdcbf3}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-datetime-datetime-friendly" Name="test-datetime-datetime-friendly">
+        </Field>
+        <Field Type="User" DisplayName="test-persongroup-people" List="UserInfo" Required="FALSE" EnforceUniqueValues="FALSE" ShowField="ImnName" UserSelectionMode="PeopleOnly" UserSelectionScope="0" Group="Test - all columns" ID="{fc07f1cd-9245-48b2-a37d-f86a179cec97}" SourceID="{{siteid}}" StaticName="test-persongroup-people" Name="test-persongroup-people" />
+        <Field Type="MediaFieldType" DisplayName="test-richmediadata" RichText="TRUE" RichTextMode="FullHtml" Required="FALSE" Group="Test - all columns" ID="{57bc10de-70bf-4d63-9306-ce80b054f0df}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-richmediadata" Name="test-richmediadata" />
+        <Field Type="Note" DisplayName="test-multi-line-text-plain-append" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RichText="FALSE" AppendOnly="TRUE" Sortable="FALSE" Group="Test - all columns" ID="{b25f82e2-317a-4364-a20c-04a9e6fda408}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-multi-line-text-plain-append" Name="test-multi-line-text-plain-append" CustomFormatter="" RestrictedMode="TRUE" RichTextMode="Compatible" IsolateStyles="FALSE" UnlimitedLengthInDocumentLibrary="FALSE">
+        </Field>
+        <Field Type="DateTime" DisplayName="test-datetime-date-friendly" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" Group="Test - all columns" FriendlyDisplayFormat="Relative" ID="{86af04ea-d8a0-4832-ab47-466a8d43a37a}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-datetime-date-friendly" Name="test-datetime-date-friendly">
+        </Field>
+        <Field Type="DateTime" DisplayName="test-datetime-date-standard-today" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" Group="Test - all columns" FriendlyDisplayFormat="Disabled" ID="{7cb8daed-c4af-46f2-9f4a-91b7066757d7}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-datetime-date-standard-today" Name="test-datetime-date-standard-today">
+          <Default>[today]</Default>
+        </Field>
+        <Field Type="Image" DisplayName="test-imageformatting" RichText="TRUE" RichTextMode="ThemeHtml" Required="FALSE" Group="Test - all columns" ID="{cea662f9-e046-40bd-947a-c1e2aec45dad}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-imageformatting" Name="test-imageformatting" />
+        <Field Type="Currency" DisplayName="test-currency-nok" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" LCID="1044" Group="Test - all columns" ID="{455b0bff-86c7-4e31-8243-31c1df6980bc}" SourceID="{c3b2fac5-2faf-45f9-bec1-d097cad2993f}" StaticName="test-currency-nok" Name="test-currency-nok">
+        </Field>
+      </pnp:SiteFields>
+
+      <pnp:ContentTypes>
+        <pnp:ContentType ID="0x01008105C52CFCD8D548BC303AE4CDE80667" Name="Test - AllColumns" Description="" Group="Test - AllColumns" NewFormUrl="" EditFormUrl="" DisplayFormUrl="">
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="c042a256-787d-4a6f-8a8a-cf6ab767f12d" Name="ContentType" UpdateChildren="true" />
+            <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" Required="true" UpdateChildren="true" />
+            <pnp:FieldRef ID="f1c3bb2e-76f5-4586-be0d-40882ff49035" Name="test-choice-checkbox" UpdateChildren="true" />
+            <pnp:FieldRef ID="8258360a-cfe4-40ef-97e9-58d894d4bb60" Name="test-choice-dropdown" UpdateChildren="true" />
+            <pnp:FieldRef ID="1069dd1a-401a-435a-8443-d8221f0323b1" Name="test-choice-radio" UpdateChildren="true" />
+            <pnp:FieldRef ID="455b0bff-86c7-4e31-8243-31c1df6980bc" Name="test-currency-nok" UpdateChildren="true" />
+            <pnp:FieldRef ID="37290e4b-eb6a-4718-8adb-84a1d9703ba6" Name="test-currency-us" UpdateChildren="true" />
+            <pnp:FieldRef ID="86af04ea-d8a0-4832-ab47-466a8d43a37a" Name="test-datetime-date-friendly" UpdateChildren="true" />
+            <pnp:FieldRef ID="63799469-e506-4cb0-88e1-001536435a1d" Name="test-datetime-date-friendly-today" UpdateChildren="true" />
+            <pnp:FieldRef ID="9986450b-f4fd-426f-b6d0-b51c0d41ba61" Name="test-datetime-date-standard" UpdateChildren="true" />
+            <pnp:FieldRef ID="7cb8daed-c4af-46f2-9f4a-91b7066757d7" Name="test-datetime-date-standard-today" UpdateChildren="true" />
+            <pnp:FieldRef ID="422feac8-8365-438a-b403-1be757cdcbf3" Name="test-datetime-datetime-friendly" UpdateChildren="true" />
+            <pnp:FieldRef ID="dc756340-75c2-44cd-b73f-295d15bb290d" Name="test-datetime-datetime-standard" UpdateChildren="true" />
+            <pnp:FieldRef ID="eee1da0a-9f8f-439f-b559-d52b832890c0" Name="test-fullhtml" UpdateChildren="true" />
+            <pnp:FieldRef ID="7347a07d-a48a-41bf-9a87-9ad1fee5e2f4" Name="test-hyperlinkformatting" UpdateChildren="true" />
+            <pnp:FieldRef ID="fa328c4c-fb09-4cfc-870c-c1ba16ac6cd1" Name="test-hyperlinkpicture-hyperlink" UpdateChildren="true" />
+            <pnp:FieldRef ID="2b59e28f-3e12-4d25-8ddf-60805c041178" Name="test-hyperlinkpicture-picture" UpdateChildren="true" />
+            <pnp:FieldRef ID="cea662f9-e046-40bd-947a-c1e2aec45dad" Name="test-imageformatting" UpdateChildren="true" />
+            <pnp:FieldRef ID="f64e9513-6777-42a3-9b98-1f5b0f65a54f" Name="test-lookup-multi" UpdateChildren="true" />
+            <pnp:FieldRef ID="b025d285-4d1a-4ff0-b391-edbd759677b0" Name="test-lookup-single" UpdateChildren="true" />
+            <pnp:FieldRef ID="35428a2c-6205-46f5-918b-1fa979bdc865" Name="nb91ac28dbe147e5b76fa0c92f261dc0" Hidden="true" UpdateChildren="true" />
+            <pnp:FieldRef ID="f3b0adf9-c1a2-4b02-920d-943fba4b3611" Name="TaxCatchAll" Hidden="true" UpdateChildren="true" />
+            <pnp:FieldRef ID="8f6b6dd8-9357-4019-8172-966fcd502ed2" Name="TaxCatchAllLabel" Hidden="true" UpdateChildren="true" />
+            <pnp:FieldRef ID="7b91ac28-dbe1-47e5-b76f-a0c92f261dc0" Name="test-managedmetadata" UpdateChildren="true" />
+            <pnp:FieldRef ID="72733dbb-ff54-421e-a3e4-cbebfb642da7" Name="p476b49a9b31428dadff0fc41f113eb7" Hidden="true" UpdateChildren="true" />
+            <pnp:FieldRef ID="9476b49a-9b31-428d-adff-0fc41f113eb7" Name="test-managedmetadata-multi" UpdateChildren="true" />
+            <pnp:FieldRef ID="56f17f1f-0bd0-4fd5-b587-d10d150dfda3" Name="test-multi-line-text-plain" UpdateChildren="true" />
+            <pnp:FieldRef ID="b25f82e2-317a-4364-a20c-04a9e6fda408" Name="test-multi-line-text-plain-append" UpdateChildren="true" />
+            <pnp:FieldRef ID="20f2734f-266f-4530-ad6c-0a2b5bb4a05c" Name="test-multi-line-text-rich" UpdateChildren="true" />
+            <pnp:FieldRef ID="876e9026-5d25-4c37-af72-a59a72d4542a" Name="test-multi-line-text-rich-append" UpdateChildren="true" />
+            <pnp:FieldRef ID="6245e606-6a20-4e3f-8d16-b44009a2239b" Name="test-number" UpdateChildren="true" />
+            <pnp:FieldRef ID="fbbc3e98-2e79-4d9b-b3af-a9f6cc24809c" Name="test-number-2-decimals" UpdateChildren="true" />
+            <pnp:FieldRef ID="638c390f-8d1d-498b-9c96-0c2900c3fb4c" Name="test-number--50-50" UpdateChildren="true" />
+            <pnp:FieldRef ID="6b6c8018-7746-4a19-a852-ea10524bf24e" Name="test-number-decimal-percentage" UpdateChildren="true" />
+            <pnp:FieldRef ID="a444de63-a0ec-4c11-9892-1a45c10ee3e0" Name="test-number-percentage" UpdateChildren="true" />
+            <pnp:FieldRef ID="fc07f1cd-9245-48b2-a37d-f86a179cec97" Name="test-persongroup-people" UpdateChildren="true" />
+            <pnp:FieldRef ID="ac6ab337-61fd-4c03-b550-5e20f24cbf4a" Name="test-persongroup-peoplegroup" UpdateChildren="true" />
+            <pnp:FieldRef ID="57bc10de-70bf-4d63-9306-ce80b054f0df" Name="test-richmediadata" UpdateChildren="true" />
+            <pnp:FieldRef ID="0b368533-3282-420b-9d6f-7c47f91e1f6e" Name="test-single-line-text" UpdateChildren="true" />
+            <pnp:FieldRef ID="512d5f31-4a0a-4b45-a63c-0a20fb0768a0" Name="test-summarylinks" UpdateChildren="true" />
+            <pnp:FieldRef ID="a0516171-632a-43a9-a39f-2b18b84e91f4" Name="test-yesno" UpdateChildren="true" />
+          </pnp:FieldRefs>
+        </pnp:ContentType>
+        <pnp:ContentType ID="0x0101009D1CB255DA76424F860D91F20E6C4118003D57B61D083D284D95E29B2C872C4D9A" Name="Test - AllColumns - Page" Description="" Group="Test - AllColumns" NewFormUrl="" EditFormUrl="" DisplayFormUrl="">
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="c042a256-787d-4a6f-8a8a-cf6ab767f12d" Name="ContentType" UpdateChildren="true" />
+            <pnp:FieldRef ID="5f47e085-2150-41dc-b661-442f3027f552" Name="SelectFilename" UpdateChildren="true" />
+            <pnp:FieldRef ID="8553196d-ec8d-4564-9861-3dbe931050c8" Name="FileLeafRef" Required="true" UpdateChildren="true" />
+            <pnp:FieldRef ID="8c06beca-0777-48f7-91c7-6da68bc07b69" Name="Created" Hidden="true" UpdateChildren="true" />
+            <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" UpdateChildren="true" />
+            <pnp:FieldRef ID="28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f" Name="Modified" Hidden="true" UpdateChildren="true" />
+            <pnp:FieldRef ID="822c78e3-1ea9-4943-b449-57863ad33ca9" Name="Modified_x0020_By" UpdateChildren="true" />
+            <pnp:FieldRef ID="4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb" Name="Created_x0020_By" UpdateChildren="true" />
+            <pnp:FieldRef ID="82642ec8-ef9b-478f-acf9-31f7d45fbc31" Name="LinkTitle" UpdateChildren="true" />
+            <pnp:FieldRef ID="7efc33c1-b56b-490e-9c9b-1097e971ba96" Name="ClientSideApplicationId" UpdateChildren="true" />
+            <pnp:FieldRef ID="daef58d7-ccfd-43fc-b776-2e292cc66bba" Name="PageLayoutType" UpdateChildren="true" />
+            <pnp:FieldRef ID="4966388e-6e12-4bc6-8990-5b5b66153eae" Name="CanvasContent1" UpdateChildren="true" />
+            <pnp:FieldRef ID="5baf6db5-9d25-4738-b15e-db5789298e82" Name="BannerImageUrl" UpdateChildren="true" />
+            <pnp:FieldRef ID="fb3259ac-bd07-4397-b7aa-03e885b0838e" Name="BannerImageOffset" UpdateChildren="true" />
+            <pnp:FieldRef ID="3f155110-a6a2-4d70-926c-94648101f0e8" Name="Description" UpdateChildren="true" />
+            <pnp:FieldRef ID="f5ad16a2-85be-46b2-b5f0-2bb8b4a5074a" Name="PromotedState" UpdateChildren="true" />
+            <pnp:FieldRef ID="c84f8697-331e-457d-884a-c4fb8f30ea74" Name="FirstPublishedDate" UpdateChildren="true" />
+            <pnp:FieldRef ID="261075db-0525-4fb8-a6ea-772014186599" Name="LayoutWebpartsContent" UpdateChildren="true" />
+            <pnp:FieldRef ID="1a7348e7-1bb7-4a47-9790-088e7cb20b58" Name="_AuthorByline" UpdateChildren="true" />
+            <pnp:FieldRef ID="d60d65ff-ff42-4044-a684-ac3f7a5e598c" Name="_TopicHeader" UpdateChildren="true" />
+            <pnp:FieldRef ID="9de685c5-fdf5-4319-b987-3edf55efb36f" Name="_SPSitePageFlags" UpdateChildren="true" />
+            <pnp:FieldRef ID="f1c3bb2e-76f5-4586-be0d-40882ff49035" Name="test-choice-checkbox" UpdateChildren="true" />
+            <pnp:FieldRef ID="8258360a-cfe4-40ef-97e9-58d894d4bb60" Name="test-choice-dropdown" UpdateChildren="true" />
+            <pnp:FieldRef ID="1069dd1a-401a-435a-8443-d8221f0323b1" Name="test-choice-radio" UpdateChildren="true" />
+            <pnp:FieldRef ID="455b0bff-86c7-4e31-8243-31c1df6980bc" Name="test-currency-nok" UpdateChildren="true" />
+            <pnp:FieldRef ID="37290e4b-eb6a-4718-8adb-84a1d9703ba6" Name="test-currency-us" UpdateChildren="true" />
+            <pnp:FieldRef ID="86af04ea-d8a0-4832-ab47-466a8d43a37a" Name="test-datetime-date-friendly" UpdateChildren="true" />
+            <pnp:FieldRef ID="63799469-e506-4cb0-88e1-001536435a1d" Name="test-datetime-date-friendly-today" UpdateChildren="true" />
+            <pnp:FieldRef ID="9986450b-f4fd-426f-b6d0-b51c0d41ba61" Name="test-datetime-date-standard" UpdateChildren="true" />
+            <pnp:FieldRef ID="7cb8daed-c4af-46f2-9f4a-91b7066757d7" Name="test-datetime-date-standard-today" UpdateChildren="true" />
+            <pnp:FieldRef ID="422feac8-8365-438a-b403-1be757cdcbf3" Name="test-datetime-datetime-friendly" UpdateChildren="true" />
+            <pnp:FieldRef ID="dc756340-75c2-44cd-b73f-295d15bb290d" Name="test-datetime-datetime-standard" UpdateChildren="true" />
+            <pnp:FieldRef ID="eee1da0a-9f8f-439f-b559-d52b832890c0" Name="test-fullhtml" UpdateChildren="true" />
+            <pnp:FieldRef ID="7347a07d-a48a-41bf-9a87-9ad1fee5e2f4" Name="test-hyperlinkformatting" UpdateChildren="true" />
+            <pnp:FieldRef ID="fa328c4c-fb09-4cfc-870c-c1ba16ac6cd1" Name="test-hyperlinkpicture-hyperlink" UpdateChildren="true" />
+            <pnp:FieldRef ID="2b59e28f-3e12-4d25-8ddf-60805c041178" Name="test-hyperlinkpicture-picture" UpdateChildren="true" />
+            <pnp:FieldRef ID="cea662f9-e046-40bd-947a-c1e2aec45dad" Name="test-imageformatting" UpdateChildren="true" />
+            <pnp:FieldRef ID="f64e9513-6777-42a3-9b98-1f5b0f65a54f" Name="test-lookup-multi" UpdateChildren="true" />
+            <pnp:FieldRef ID="b025d285-4d1a-4ff0-b391-edbd759677b0" Name="test-lookup-single" UpdateChildren="true" />
+            <pnp:FieldRef ID="35428a2c-6205-46f5-918b-1fa979bdc865" Name="nb91ac28dbe147e5b76fa0c92f261dc0" Hidden="true" UpdateChildren="true" />
+            <pnp:FieldRef ID="f3b0adf9-c1a2-4b02-920d-943fba4b3611" Name="TaxCatchAll" Hidden="true" UpdateChildren="true" />
+            <pnp:FieldRef ID="8f6b6dd8-9357-4019-8172-966fcd502ed2" Name="TaxCatchAllLabel" Hidden="true" UpdateChildren="true" />
+            <pnp:FieldRef ID="7b91ac28-dbe1-47e5-b76f-a0c92f261dc0" Name="test-managedmetadata" UpdateChildren="true" />
+            <pnp:FieldRef ID="72733dbb-ff54-421e-a3e4-cbebfb642da7" Name="p476b49a9b31428dadff0fc41f113eb7" Hidden="true" UpdateChildren="true" />
+            <pnp:FieldRef ID="9476b49a-9b31-428d-adff-0fc41f113eb7" Name="test-managedmetadata-multi" UpdateChildren="true" />
+            <pnp:FieldRef ID="56f17f1f-0bd0-4fd5-b587-d10d150dfda3" Name="test-multi-line-text-plain" UpdateChildren="true" />
+            <pnp:FieldRef ID="b25f82e2-317a-4364-a20c-04a9e6fda408" Name="test-multi-line-text-plain-append" UpdateChildren="true" />
+            <pnp:FieldRef ID="20f2734f-266f-4530-ad6c-0a2b5bb4a05c" Name="test-multi-line-text-rich" UpdateChildren="true" />
+            <pnp:FieldRef ID="876e9026-5d25-4c37-af72-a59a72d4542a" Name="test-multi-line-text-rich-append" UpdateChildren="true" />
+            <pnp:FieldRef ID="6245e606-6a20-4e3f-8d16-b44009a2239b" Name="test-number" UpdateChildren="true" />
+            <pnp:FieldRef ID="fbbc3e98-2e79-4d9b-b3af-a9f6cc24809c" Name="test-number-2-decimals" UpdateChildren="true" />
+            <pnp:FieldRef ID="638c390f-8d1d-498b-9c96-0c2900c3fb4c" Name="test-number--50-50" UpdateChildren="true" />
+            <pnp:FieldRef ID="6b6c8018-7746-4a19-a852-ea10524bf24e" Name="test-number-decimal-percentage" UpdateChildren="true" />
+            <pnp:FieldRef ID="a444de63-a0ec-4c11-9892-1a45c10ee3e0" Name="test-number-percentage" UpdateChildren="true" />
+            <pnp:FieldRef ID="fc07f1cd-9245-48b2-a37d-f86a179cec97" Name="test-persongroup-people" UpdateChildren="true" />
+            <pnp:FieldRef ID="ac6ab337-61fd-4c03-b550-5e20f24cbf4a" Name="test-persongroup-peoplegroup" UpdateChildren="true" />
+            <pnp:FieldRef ID="57bc10de-70bf-4d63-9306-ce80b054f0df" Name="test-richmediadata" UpdateChildren="true" />
+            <pnp:FieldRef ID="0b368533-3282-420b-9d6f-7c47f91e1f6e" Name="test-single-line-text" UpdateChildren="true" />
+            <pnp:FieldRef ID="512d5f31-4a0a-4b45-a63c-0a20fb0768a0" Name="test-summarylinks" UpdateChildren="true" />
+            <pnp:FieldRef ID="a0516171-632a-43a9-a39f-2b18b84e91f4" Name="test-yesno" UpdateChildren="true" />
+          </pnp:FieldRefs>
+          <pnp:DocumentTemplate TargetName="/_layouts/15/CreateSitePage.aspx" />
+        </pnp:ContentType>
+      </pnp:ContentTypes>
+
+      <pnp:Lists>
+        <pnp:ListInstance Title="Test-Lookup-Source" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/TestLookupSource" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/TestLookupSource/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/TestLookupSource/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/TestLookupSource/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{84CB9F94-8D37-4C32-8C79-E1B815059053}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/TestLookupSource/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:DataRows UpdateBehavior="Overwrite" KeyColumn="Title">
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="ContentTypeId">0x01</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Lookup-Alpha</pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="ContentTypeId">0x01</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Lookup-Bravo</pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="ContentTypeId">0x01</pnp:DataValue>
+              <pnp:DataValue FieldName="Title">Lookup-Charlie</pnp:DataValue>
+            </pnp:DataRow>
+          </pnp:DataRows>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Site Pages" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="119" Url="SitePages" EnableVersioning="true" EnableMinorVersions="true" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="1" TemplateFeatureID="00bfea71-c796-4402-9f2f-0eb9a6e71b18" ContentTypesEnabled="true" EnableAttachments="false" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/SitePages/Forms/DispForm.aspx" DefaultEditFormUrl="{site}/SitePages/Forms/EditForm.aspx" DefaultNewFormUrl="{site}/SitePages/Forms/Upload.aspx" ImageUrl="/_layouts/15/images/itdl.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="true" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C4118" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C4118002A50BFCFB7614729B56886FADA02339B" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C4118003D57B61D083D284D95E29B2C872C4D9A" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{706D5B37-5ACD-48E9-93CB-C2810A12BF5E}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="By Author" Url="{site}/SitePages/Forms/ByAuthor.aspx" Level="1" BaseViewID="4" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+              <Query>
+                <GroupBy Collapse="FALSE">
+                  <FieldRef Name="Author" />
+                </GroupBy>
+                <OrderBy>
+                  <FieldRef Name="Modified" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Created" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{8EB62962-2983-47CA-9A7B-0B5C62BCBE7A}" Type="HTML" DisplayName="Created By Me" Url="{site}/SitePages/Forms/CreatedByMe.aspx" Level="1" BaseViewID="3" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+              <Query>
+                <Where>
+                  <Eq>
+                    <FieldRef Name="Author" />
+                    <Value Type="Integer">
+                      <UserID />
+                    </Value>
+                  </Eq>
+                </Where>
+                <OrderBy>
+                  <FieldRef Name="FileLeafRef" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Author" />
+                <FieldRef Name="Created" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{254CBC16-B733-4F05-BE78-60BDF8F853E9}" Type="HTML" DisplayName="By Editor" Url="{site}/SitePages/Forms/ByEditor.aspx" Level="1" BaseViewID="5" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+              <Query>
+                <GroupBy Collapse="FALSE">
+                  <FieldRef Name="Editor" />
+                </GroupBy>
+                <OrderBy>
+                  <FieldRef Name="FileLeafRef" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Author" />
+                <FieldRef Name="Created" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{C0E10472-E088-4AA7-9C79-5961742180F4}" Type="HTML" DisplayName="All Pages" Url="{site}/SitePages/Forms/AllPages.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="Modified" Ascending="FALSE" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Author" />
+                <FieldRef Name="Created" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{3793EDE3-3573-46E3-9B3C-572AE068C769}" Type="HTML" DisplayName="Recent Changes" Url="{site}/SitePages/Forms/RecentChanges.aspx" Level="1" BaseViewID="2" ContentTypeID="0x" ToolbarTemplate="WikiLibraryViewToolBar" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="Modified" Ascending="FALSE" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Author" />
+                <FieldRef Name="Created" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="72733dbb-ff54-421e-a3e4-cbebfb642da7" Name="p476b49a9b31428dadff0fc41f113eb7" Hidden="true" DisplayName="test-managedmetadata-multi_0" />
+            <pnp:FieldRef ID="35428a2c-6205-46f5-918b-1fa979bdc865" Name="nb91ac28dbe147e5b76fa0c92f261dc0" Hidden="true" DisplayName="test-managedmetadata_0" />
+            <pnp:FieldRef ID="4966388e-6e12-4bc6-8990-5b5b66153eae" Name="CanvasContent1" DisplayName="Authoring Canvas Content" />
+            <pnp:FieldRef ID="5baf6db5-9d25-4738-b15e-db5789298e82" Name="BannerImageUrl" DisplayName="Banner Image URL" />
+            <pnp:FieldRef ID="3f155110-a6a2-4d70-926c-94648101f0e8" Name="Description" DisplayName="Description" />
+            <pnp:FieldRef ID="f5ad16a2-85be-46b2-b5f0-2bb8b4a5074a" Name="PromotedState" DisplayName="Promoted State" />
+            <pnp:FieldRef ID="c84f8697-331e-457d-884a-c4fb8f30ea74" Name="FirstPublishedDate" DisplayName="First Published Date" />
+            <pnp:FieldRef ID="261075db-0525-4fb8-a6ea-772014186599" Name="LayoutWebpartsContent" DisplayName="Page Layout Content" />
+            <pnp:FieldRef ID="1a7348e7-1bb7-4a47-9790-088e7cb20b58" Name="_AuthorByline" DisplayName="Author Byline" />
+            <pnp:FieldRef ID="d60d65ff-ff42-4044-a684-ac3f7a5e598c" Name="_TopicHeader" DisplayName="Topic header" />
+            <pnp:FieldRef ID="9de685c5-fdf5-4319-b987-3edf55efb36f" Name="_SPSitePageFlags" DisplayName="Site Page Flags" />
+            <pnp:FieldRef ID="0e7b982f-698a-4d0c-aacb-f16906f66d30" Name="_OriginalSourceUrl" DisplayName="Original Source Url" />
+            <pnp:FieldRef ID="36193413-dd5c-4096-8c1e-1b40098b9ba3" Name="_OriginalSourceSiteId" DisplayName="Original Source Site ID" />
+            <pnp:FieldRef ID="3477a5bc-c605-4b2e-a7c1-8db8f13c017e" Name="_OriginalSourceWebId" DisplayName="Original Source Web ID" />
+            <pnp:FieldRef ID="139da674-dbf6-439f-98e0-4eb05fa9a669" Name="_OriginalSourceListId" DisplayName="Original Source List ID" />
+            <pnp:FieldRef ID="91e86a43-75f2-426f-80da-35edfb47d55d" Name="_OriginalSourceItemId" DisplayName="Original Source Item ID" />
+            <pnp:FieldRef ID="f1c3bb2e-76f5-4586-be0d-40882ff49035" Name="test_x002d_choice_x002d_checkbox" DisplayName="test-choice-checkbox" />
+            <pnp:FieldRef ID="8258360a-cfe4-40ef-97e9-58d894d4bb60" Name="test_x002d_choice_x002d_dropdown" DisplayName="test-choice-dropdown" />
+            <pnp:FieldRef ID="1069dd1a-401a-435a-8443-d8221f0323b1" Name="test_x002d_choice_x002d_radio" DisplayName="test-choice-radio" />
+            <pnp:FieldRef ID="455b0bff-86c7-4e31-8243-31c1df6980bc" Name="test_x002d_currency_x002d_nok" DisplayName="test-currency-nok" />
+            <pnp:FieldRef ID="37290e4b-eb6a-4718-8adb-84a1d9703ba6" Name="test_x002d_currency_x002d_us" DisplayName="test-currency-us" />
+            <pnp:FieldRef ID="86af04ea-d8a0-4832-ab47-466a8d43a37a" Name="test_x002d_datetime_x002d_date_x002d_friendly" DisplayName="test-datetime-date-friendly" />
+            <pnp:FieldRef ID="63799469-e506-4cb0-88e1-001536435a1d" Name="test_x002d_datetime_x002d_date_x002d_friendly_x002d_today" DisplayName="test-datetime-date-friendly-today" />
+            <pnp:FieldRef ID="9986450b-f4fd-426f-b6d0-b51c0d41ba61" Name="test_x002d_datetime_x002d_date_x002d_standard" DisplayName="test-datetime-date-standard" />
+            <pnp:FieldRef ID="7cb8daed-c4af-46f2-9f4a-91b7066757d7" Name="test_x002d_datetime_x002d_date_x002d_standard_x002d_today" DisplayName="test-datetime-date-standard-today" />
+            <pnp:FieldRef ID="422feac8-8365-438a-b403-1be757cdcbf3" Name="test_x002d_datetime_x002d_datetime_x002d_friendly" DisplayName="test-datetime-datetime-friendly" />
+            <pnp:FieldRef ID="dc756340-75c2-44cd-b73f-295d15bb290d" Name="test_x002d_datetime_x002d_datetime_x002d_standard" DisplayName="test-datetime-datetime-standard" />
+            <pnp:FieldRef ID="eee1da0a-9f8f-439f-b559-d52b832890c0" Name="test_x002d_fullhtml" DisplayName="test-fullhtml" />
+            <pnp:FieldRef ID="7347a07d-a48a-41bf-9a87-9ad1fee5e2f4" Name="test_x002d_hyperlinkformatting" DisplayName="test-hyperlinkformatting" />
+            <pnp:FieldRef ID="fa328c4c-fb09-4cfc-870c-c1ba16ac6cd1" Name="test_x002d_hyperlinkpicture_x002d_hyperlink" DisplayName="test-hyperlinkpicture-hyperlink" />
+            <pnp:FieldRef ID="2b59e28f-3e12-4d25-8ddf-60805c041178" Name="test_x002d_hyperlinkpicture_x002d_picture" DisplayName="test-hyperlinkpicture-picture" />
+            <pnp:FieldRef ID="cea662f9-e046-40bd-947a-c1e2aec45dad" Name="test_x002d_imageformatting" DisplayName="test-imageformatting" />
+            <pnp:FieldRef ID="f64e9513-6777-42a3-9b98-1f5b0f65a54f" Name="test_x002d_lookup_x002d_multi" DisplayName="test-lookup-multi" />
+            <pnp:FieldRef ID="b025d285-4d1a-4ff0-b391-edbd759677b0" Name="test_x002d_lookup_x002d_single" DisplayName="test-lookup-single" />
+            <pnp:FieldRef ID="7b91ac28-dbe1-47e5-b76f-a0c92f261dc0" Name="test_x002d_managedmetadata" DisplayName="test-managedmetadata" />
+            <pnp:FieldRef ID="9476b49a-9b31-428d-adff-0fc41f113eb7" Name="test_x002d_managedmetadata_x002d_multi" DisplayName="test-managedmetadata-multi" />
+            <pnp:FieldRef ID="56f17f1f-0bd0-4fd5-b587-d10d150dfda3" Name="test_x002d_multi_x002d_line_x002d_text_x002d_plain" DisplayName="test-multi-line-text-plain" />
+            <pnp:FieldRef ID="b25f82e2-317a-4364-a20c-04a9e6fda408" Name="test_x002d_multi_x002d_line_x002d_text_x002d_plain_x002d_append" DisplayName="test-multi-line-text-plain-append" />
+            <pnp:FieldRef ID="20f2734f-266f-4530-ad6c-0a2b5bb4a05c" Name="test_x002d_multi_x002d_line_x002d_text_x002d_rich" DisplayName="test-multi-line-text-rich" />
+            <pnp:FieldRef ID="876e9026-5d25-4c37-af72-a59a72d4542a" Name="test_x002d_multi_x002d_line_x002d_text_x002d_rich_x002d_append" DisplayName="test-multi-line-text-rich-append" />
+            <pnp:FieldRef ID="6245e606-6a20-4e3f-8d16-b44009a2239b" Name="test_x002d_number" DisplayName="test-number" />
+            <pnp:FieldRef ID="fbbc3e98-2e79-4d9b-b3af-a9f6cc24809c" Name="test_x002d_number_x002d_2_x002d_decimals" DisplayName="test-number-2-decimals" />
+            <pnp:FieldRef ID="638c390f-8d1d-498b-9c96-0c2900c3fb4c" Name="test_x002d_number_x002d__x002d_50_x002d_50" DisplayName="test-number--50-50" />
+            <pnp:FieldRef ID="6b6c8018-7746-4a19-a852-ea10524bf24e" Name="test_x002d_number_x002d_decimal_x002d_percentage" DisplayName="test-number-decimal-percentage" />
+            <pnp:FieldRef ID="a444de63-a0ec-4c11-9892-1a45c10ee3e0" Name="test_x002d_number_x002d_percentage" DisplayName="test-number-percentage" />
+            <pnp:FieldRef ID="fc07f1cd-9245-48b2-a37d-f86a179cec97" Name="test_x002d_persongroup_x002d_people" DisplayName="test-persongroup-people" />
+            <pnp:FieldRef ID="ac6ab337-61fd-4c03-b550-5e20f24cbf4a" Name="test_x002d_persongroup_x002d_peoplegroup" DisplayName="test-persongroup-peoplegroup" />
+            <pnp:FieldRef ID="57bc10de-70bf-4d63-9306-ce80b054f0df" Name="test_x002d_richmediadata" DisplayName="test-richmediadata" />
+            <pnp:FieldRef ID="0b368533-3282-420b-9d6f-7c47f91e1f6e" Name="test_x002d_single_x002d_line_x002d_text" DisplayName="test-single-line-text" />
+            <pnp:FieldRef ID="512d5f31-4a0a-4b45-a63c-0a20fb0768a0" Name="test_x002d_summarylinks" DisplayName="test-summarylinks" />
+            <pnp:FieldRef ID="a0516171-632a-43a9-a39f-2b18b84e91f4" Name="test_x002d_yesno" DisplayName="test-yesno" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Test-AllColumns" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/TestAllColumns" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" ContentTypesEnabled="true" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/TestAllColumns/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/TestAllColumns/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/TestAllColumns/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01008105C52CFCD8D548BC303AE4CDE80667" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{5D136069-29AC-4548-B5A6-0AE851011A50}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/TestAllColumns/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="test_x002d_choice_x002d_checkbox" />
+                <FieldRef Name="test_x002d_choice_x002d_dropdown" />
+                <FieldRef Name="test_x002d_choice_x002d_radio" />
+                <FieldRef Name="test_x002d_currency_x002d_nok" />
+                <FieldRef Name="test_x002d_currency_x002d_us" />
+                <FieldRef Name="test_x002d_datetime_x002d_date_x" />
+                <FieldRef Name="test_x002d_datetime_x002d_date_x0" />
+                <FieldRef Name="test_x002d_datetime_x002d_date_x1" />
+                <FieldRef Name="test_x002d_datetime_x002d_date_x2" />
+                <FieldRef Name="test_x002d_datetime_x002d_dateti" />
+                <FieldRef Name="test_x002d_datetime_x002d_dateti0" />
+                <FieldRef Name="test_x002d_fullhtml" />
+                <FieldRef Name="test_x002d_hyperlinkformatting" />
+                <FieldRef Name="test_x002d_hyperlinkpicture_x002" />
+                <FieldRef Name="test_x002d_hyperlinkpicture_x0020" />
+                <FieldRef Name="test_x002d_imageformatting" />
+                <FieldRef Name="test_x002d_lookup_x002d_multi" />
+                <FieldRef Name="test_x002d_lookup_x002d_single" />
+                <FieldRef Name="test_x002d_managedmetadata" />
+                <FieldRef Name="test_x002d_managedmetadata_x002d" />
+                <FieldRef Name="test_x002d_multi_x002d_line_x002" />
+                <FieldRef Name="test_x002d_multi_x002d_line_x0020" />
+                <FieldRef Name="test_x002d_multi_x002d_line_x0021" />
+                <FieldRef Name="test_x002d_multi_x002d_line_x0022" />
+                <FieldRef Name="test_x002d_number" />
+                <FieldRef Name="test_x002d_number_x002d_2_x002d_" />
+                <FieldRef Name="test_x002d_number_x002d__x002d_5" />
+                <FieldRef Name="test_x002d_number_x002d_decimal_" />
+                <FieldRef Name="test_x002d_number_x002d_percenta" />
+                <FieldRef Name="test_x002d_persongroup_x002d_peo" />
+                <FieldRef Name="test_x002d_persongroup_x002d_peo0" />
+                <FieldRef Name="test_x002d_richmediadata" />
+                <FieldRef Name="test_x002d_single_x002d_line_x00" />
+                <FieldRef Name="test_x002d_summarylinks" />
+                <FieldRef Name="test_x002d_yesno" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="72733dbb-ff54-421e-a3e4-cbebfb642da7" Name="p476b49a9b31428dadff0fc41f113eb7" Hidden="true" DisplayName="test-managedmetadata-multi_0" />
+            <pnp:FieldRef ID="35428a2c-6205-46f5-918b-1fa979bdc865" Name="nb91ac28dbe147e5b76fa0c92f261dc0" Hidden="true" DisplayName="test-managedmetadata_0" />
+            <pnp:FieldRef ID="f1c3bb2e-76f5-4586-be0d-40882ff49035" Name="test_x002d_choice_x002d_checkbox" DisplayName="test-choice-checkbox" />
+            <pnp:FieldRef ID="8258360a-cfe4-40ef-97e9-58d894d4bb60" Name="test_x002d_choice_x002d_dropdown" DisplayName="test-choice-dropdown" />
+            <pnp:FieldRef ID="1069dd1a-401a-435a-8443-d8221f0323b1" Name="test_x002d_choice_x002d_radio" DisplayName="test-choice-radio" />
+            <pnp:FieldRef ID="455b0bff-86c7-4e31-8243-31c1df6980bc" Name="test_x002d_currency_x002d_nok" DisplayName="test-currency-nok" />
+            <pnp:FieldRef ID="37290e4b-eb6a-4718-8adb-84a1d9703ba6" Name="test_x002d_currency_x002d_us" DisplayName="test-currency-us" />
+            <pnp:FieldRef ID="86af04ea-d8a0-4832-ab47-466a8d43a37a" Name="test_x002d_datetime_x002d_date_x" DisplayName="test-datetime-date-friendly" />
+            <pnp:FieldRef ID="63799469-e506-4cb0-88e1-001536435a1d" Name="test_x002d_datetime_x002d_date_x0" DisplayName="test-datetime-date-friendly-today" />
+            <pnp:FieldRef ID="9986450b-f4fd-426f-b6d0-b51c0d41ba61" Name="test_x002d_datetime_x002d_date_x1" DisplayName="test-datetime-date-standard" />
+            <pnp:FieldRef ID="7cb8daed-c4af-46f2-9f4a-91b7066757d7" Name="test_x002d_datetime_x002d_date_x2" DisplayName="test-datetime-date-standard-today" />
+            <pnp:FieldRef ID="422feac8-8365-438a-b403-1be757cdcbf3" Name="test_x002d_datetime_x002d_dateti" DisplayName="test-datetime-datetime-friendly" />
+            <pnp:FieldRef ID="dc756340-75c2-44cd-b73f-295d15bb290d" Name="test_x002d_datetime_x002d_dateti0" DisplayName="test-datetime-datetime-standard" />
+            <pnp:FieldRef ID="eee1da0a-9f8f-439f-b559-d52b832890c0" Name="test_x002d_fullhtml" DisplayName="test-fullhtml" />
+            <pnp:FieldRef ID="7347a07d-a48a-41bf-9a87-9ad1fee5e2f4" Name="test_x002d_hyperlinkformatting" DisplayName="test-hyperlinkformatting" />
+            <pnp:FieldRef ID="fa328c4c-fb09-4cfc-870c-c1ba16ac6cd1" Name="test_x002d_hyperlinkpicture_x002" DisplayName="test-hyperlinkpicture-hyperlink" />
+            <pnp:FieldRef ID="2b59e28f-3e12-4d25-8ddf-60805c041178" Name="test_x002d_hyperlinkpicture_x0020" DisplayName="test-hyperlinkpicture-picture" />
+            <pnp:FieldRef ID="cea662f9-e046-40bd-947a-c1e2aec45dad" Name="test_x002d_imageformatting" DisplayName="test-imageformatting" />
+            <pnp:FieldRef ID="f64e9513-6777-42a3-9b98-1f5b0f65a54f" Name="test_x002d_lookup_x002d_multi" DisplayName="test-lookup-multi" />
+            <pnp:FieldRef ID="b025d285-4d1a-4ff0-b391-edbd759677b0" Name="test_x002d_lookup_x002d_single" DisplayName="test-lookup-single" />
+            <pnp:FieldRef ID="7b91ac28-dbe1-47e5-b76f-a0c92f261dc0" Name="test_x002d_managedmetadata" DisplayName="test-managedmetadata" />
+            <pnp:FieldRef ID="9476b49a-9b31-428d-adff-0fc41f113eb7" Name="test_x002d_managedmetadata_x002d" DisplayName="test-managedmetadata-multi" />
+            <pnp:FieldRef ID="56f17f1f-0bd0-4fd5-b587-d10d150dfda3" Name="test_x002d_multi_x002d_line_x002" DisplayName="test-multi-line-text-plain" />
+            <pnp:FieldRef ID="b25f82e2-317a-4364-a20c-04a9e6fda408" Name="test_x002d_multi_x002d_line_x0020" DisplayName="test-multi-line-text-plain-append" />
+            <pnp:FieldRef ID="20f2734f-266f-4530-ad6c-0a2b5bb4a05c" Name="test_x002d_multi_x002d_line_x0021" DisplayName="test-multi-line-text-rich" />
+            <pnp:FieldRef ID="876e9026-5d25-4c37-af72-a59a72d4542a" Name="test_x002d_multi_x002d_line_x0022" DisplayName="test-multi-line-text-rich-append" />
+            <pnp:FieldRef ID="6245e606-6a20-4e3f-8d16-b44009a2239b" Name="test_x002d_number" DisplayName="test-number" />
+            <pnp:FieldRef ID="fbbc3e98-2e79-4d9b-b3af-a9f6cc24809c" Name="test_x002d_number_x002d_2_x002d_" DisplayName="test-number-2-decimals" />
+            <pnp:FieldRef ID="638c390f-8d1d-498b-9c96-0c2900c3fb4c" Name="test_x002d_number_x002d__x002d_5" DisplayName="test-number--50-50" />
+            <pnp:FieldRef ID="6b6c8018-7746-4a19-a852-ea10524bf24e" Name="test_x002d_number_x002d_decimal_" DisplayName="test-number-decimal-percentage" />
+            <pnp:FieldRef ID="a444de63-a0ec-4c11-9892-1a45c10ee3e0" Name="test_x002d_number_x002d_percenta" DisplayName="test-number-percentage" />
+            <pnp:FieldRef ID="fc07f1cd-9245-48b2-a37d-f86a179cec97" Name="test_x002d_persongroup_x002d_peo" DisplayName="test-persongroup-people" />
+            <pnp:FieldRef ID="ac6ab337-61fd-4c03-b550-5e20f24cbf4a" Name="test_x002d_persongroup_x002d_peo0" DisplayName="test-persongroup-peoplegroup" />
+            <pnp:FieldRef ID="57bc10de-70bf-4d63-9306-ce80b054f0df" Name="test_x002d_richmediadata" DisplayName="test-richmediadata" />
+            <pnp:FieldRef ID="0b368533-3282-420b-9d6f-7c47f91e1f6e" Name="test_x002d_single_x002d_line_x00" DisplayName="test-single-line-text" />
+            <pnp:FieldRef ID="512d5f31-4a0a-4b45-a63c-0a20fb0768a0" Name="test_x002d_summarylinks" DisplayName="test-summarylinks" />
+            <pnp:FieldRef ID="a0516171-632a-43a9-a39f-2b18b84e91f4" Name="test_x002d_yesno" DisplayName="test-yesno" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+      </pnp:Lists>
+
+      <pnp:TermGroups>
+        <pnp:TermGroup Name="test-taxonomygroup" ID="ff98c935-8039-4c67-bc5c-8f634df6528a" Description="" UpdateBehavior="Overwrite">
+          <pnp:TermSets>
+            <pnp:TermSet Name="test-taxonomytermset" ID="60e36cd7-009a-48fa-8668-d16fb3e0775e" Description="">
+              <pnp:Terms>
+                <pnp:Term Name="test-term1" ID="80559dd9-5cb8-40a8-b6e7-f70319e8a9fe" Description="" SourceTermId="80559dd9-5cb8-40a8-b6e7-f70319e8a9fe">
+                  <pnp:Terms />
+                </pnp:Term>
+                <pnp:Term Name="test-term2" ID="12d5c841-5ce7-47ee-8b35-24a0bbca62d2" Description="" SourceTermId="12d5c841-5ce7-47ee-8b35-24a0bbca62d2">
+                  <pnp:Terms />
+                </pnp:Term>
+                <pnp:Term Name="test-term3" ID="de3fe5d3-30b9-474c-91d6-ad3ca8d7edfa" Description="" SourceTermId="de3fe5d3-30b9-474c-91d6-ad3ca8d7edfa">
+                  <pnp:Terms />
+                </pnp:Term>
+                <pnp:Term Name="test-term4" ID="03dc1d66-5b64-4c0c-b3a1-b4f7533ae55f" Description="" SourceTermId="03dc1d66-5b64-4c0c-b3a1-b4f7533ae55f">
+                  <pnp:Terms />
+                </pnp:Term>
+                <pnp:Term Name="test-term5" ID="24929a78-b020-4db0-8174-3f0ae964eca6" Description="" SourceTermId="24929a78-b020-4db0-8174-3f0ae964eca6">
+                  <pnp:Terms />
+                </pnp:Term>
+              </pnp:Terms>
+            </pnp:TermSet>
+          </pnp:TermSets>
+        </pnp:TermGroup>
+      </pnp:TermGroups>
+      
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>
