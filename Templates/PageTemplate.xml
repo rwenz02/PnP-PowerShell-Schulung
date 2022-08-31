@@ -1,0 +1,68 @@
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2021/03/ProvisioningSchema"
+Author="Rick Wenz"
+Generator="RWE Provisioning"
+Version="1.0">
+
+  <pnp:Preferences Author="Rick Wenz" Version="1.0" Generator="RWE Provisioning" />
+
+  <pnp:Templates ID="RWE.Intranet">
+
+    <pnp:ProvisioningTemplate ID="RWE.Intranet.PageTemplates" Version="1.0">
+
+      <pnp:ClientSidePages>
+
+        <!-- example page ~-->
+
+        <pnp:ClientSidePage PageName="CustomPage"
+                            PromoteAsTemplate="true"
+                            PromoteAsNewsArticle="true"
+                            Overwrite="false"
+                            Publish="true"
+                            Layout="Article"
+                            EnableComments="true"
+                            Title=""
+                            ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800491E788D80884E05AA32228207260F18">
+          <pnp:Header Type="Default"
+                      LayoutType="FullWidthImage"
+                      ShowTopicHeader="false"
+                      ShowPublishDate="false"
+                      TopicHeader=""
+                      AlternativeText=""/>
+			
+		          <pnp:Sections>
+                    <pnp:Section Order="1" Type="TwoColumnRight">
+                        <pnp:Controls>
+                            <pnp:CanvasControl WebPartType="People" 
+                                               JsonControlData="{&quot;id&quot;: &quot;7f718435-ee4d-431c-bdbf-9c4ff326f46e&quot;, &quot;instanceId&quot;: &quot;198a3a1e-225d-4212-b9ba-a67843c4a32f&quot;, &quot;title&quot;: &quot;Personen&quot;, &quot;description&quot;: &quot;Anzeigen ausgewählter Personen und ihrer Profile.&quot;, &quot;dataVersion&quot;: &quot;1.3&quot;, &quot;properties&quot;: {&quot;layout&quot;:1,&quot;persons&quot;:[]}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;title&quot;:&quot;Kontakt&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}" 
+                                               ControlId="7f718435-ee4d-431c-bdbf-9c4ff326f46e" 
+                                               Order="1" 
+                                               Column="1"/>
+
+                            <pnp:CanvasControl WebPartType="QuickLinks" 
+                                               JsonControlData="{&quot;id&quot;: &quot;c70391ea-0b10-4ee9-b2b4-006d3fcad0cd&quot;, &quot;instanceId&quot;: &quot;c151bebb-66b9-44bf-a292-9c6dc24c0a5b&quot;, &quot;title&quot;: &quot;Quicklinks&quot;, &quot;description&quot;: &quot;Zeigen Sie eine Sammlung von Links zu Inhalten wie Dokumenten, Bildern, Videos und mehr in einer Vielzahl von Layouts mit Optionen für Symbole, Bilder und Zielgruppenadressierung an.&quot;, &quot;dataVersion&quot;: &quot;2.2&quot;, &quot;properties&quot;: {&quot;items&quot;:[],&quot;isMigrated&quot;:true,&quot;layoutId&quot;:&quot;Button&quot;,&quot;shouldShowThumbnail&quot;:true,&quot;imageWidth&quot;:100,&quot;buttonLayoutOptions&quot;:{&quot;showDescription&quot;:false,&quot;buttonTreatment&quot;:3,&quot;iconPositionType&quot;:2,&quot;textAlignmentVertical&quot;:2,&quot;textAlignmentHorizontal&quot;:2,&quot;linesOfText&quot;:1},&quot;listLayoutOptions&quot;:{&quot;showDescription&quot;:false,&quot;showIcon&quot;:true},&quot;waffleLayoutOptions&quot;:{&quot;iconSize&quot;:1,&quot;onlyShowThumbnail&quot;:false},&quot;hideWebPartWhenEmpty&quot;:true,&quot;dataProviderId&quot;:&quot;QuickLinks&quot;,&quot;webId&quot;:&quot;{siteid}&quot;,&quot;siteId&quot;:&quot;{sitecollectionid}&quot;}, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;title&quot;:&quot;Weitere Links&quot;},&quot;imageSources&quot;:{},&quot;links&quot;:{&quot;baseUrl&quot;:&quot;https://{fqdn}{site}&quot;},&quot;componentDependencies&quot;:{&quot;layoutComponentId&quot;:&quot;706e33c8-af37-4e7b-9d22-6e5694d92a6f&quot;}}, &quot;dynamicDataPaths&quot;: {}, &quot;dynamicDataValues&quot;: {}}"
+                                               ControlId="c70391ea-0b10-4ee9-b2b4-006d3fcad0cd"
+                                               Order="2"
+                                               Column="1"/>
+                            
+                            <pnp:CanvasControl WebPartType="Text" 
+                                               ControlId="42637adf-a738-4305-8280-fd6f5a2d1308" 
+                                               Order="2" 
+                                               Column="2">
+                                <pnp:CanvasControlProperties>
+                                    <pnp:CanvasControlProperty Key="Text" Value="&lt;br&gt;" />
+                                </pnp:CanvasControlProperties>
+                            </pnp:CanvasControl>
+                        </pnp:Controls>
+                    </pnp:Section>
+		          </pnp:Sections>
+
+        </pnp:ClientSidePage>  
+
+        <!-- ~ example page -->
+
+      </pnp:ClientSidePages>
+
+
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

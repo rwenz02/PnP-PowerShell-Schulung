@@ -1,0 +1,64 @@
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2021/03/ProvisioningSchema"
+                  Author="Rick Wenz"
+                  Generator="RWE Provisioning"
+                  Version="1.0">
+
+  <pnp:Preferences Author="Rick Wenz" Version="1.0" Generator="RWE Provisioning" />
+
+  <pnp:Templates ID="RWE.Intranet">
+
+    <pnp:ProvisioningTemplate ID="RWE.Intranet.Lists" Version="1.0">
+
+      <pnp:Lists>
+
+        <!-- example list -->
+        <pnp:ListInstance Title="Example List"
+                          Description="A example list to show the structure of list templates"
+                          TemplateType="100"
+                          Url="Lists/ExampleList"
+                          EnableAttachments="false"
+                          EnableFolderCreation="false"
+                          EnableVersioning="false"
+                          MinorVersionLimit="0"
+                          MaxVersionLimit="0"
+                          DraftVersionVisibility="0">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x0101009D1CB255DA76424F860D91F20E6C411800491E788D80884E05AA32228207260F18" Default="true" />
+          </pnp:ContentTypeBindings>
+          <pnp:FieldRefs>
+            <!-- Title -->
+            <pnp:FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Required="false" DisplayName="Title" Hidden="true"  />
+			      <pnp:FieldRef ID="{2d2b0821-259e-4507-ba37-0a21c29514c7}" Required="true" DisplayName="Content" Hidden="false"  />
+            <pnp:FieldRef ID="{E000A1ED-9FBD-453E-B7A4-C36A4BCA58D0}" Required="true" DisplayName="Category" Hidden="false"  />
+            <pnp:FieldRef ID="{3107D6BF-EBAC-443D-8621-EE50020E0110}" Required="true" DisplayName="Publishing Date" Hidden="false"  />
+			      <pnp:FieldRef ID="{D849D563-D7E3-4F87-B24C-CE20FAA8FBF0}" Required="true" DisplayName="Active" Hidden="false"  />
+          </pnp:FieldRefs>
+          <pnp:Views RemoveExistingViews="true">
+            <View Name="{a282833a-d408-4d96-a635-84fb415bbfc1}" DefaultView="TRUE" MobileView="TRUE" Type="HTML" DisplayName="All Items" >
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="News_StartDate" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <!-- RWE_Content -->
+                <pnp:FieldRef Name="RWE_Content"/>
+
+                <!-- RWE_Category -->
+                <pnp:FieldRef Name="RWE_Category"/>
+
+                <!-- RWE_PublishingDate -->
+                <pnp:FieldRef Name="RWE_PublishingDate"/>
+				
+				        <!-- RWE_NewsIsActive -->
+                <pnp:FieldRef Name="RWE_NewsIsActive"/>
+              </ViewFields>
+            </View>
+          </pnp:Views>
+        </pnp:ListInstance>
+        <!-- ~example list -->
+
+      </pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>
